@@ -1,0 +1,171 @@
+.team {
+  height: 750px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr) repeat(6, 30px) 50px repeat(3, 1fr);
+  grid-template-areas:
+    "title title"
+    "descr descr"
+    "photoMember secondTitle"
+    "photoMember secondText"
+    "photoMember thirdText"
+    "photoMember sectionBrandingPercent"
+    "photoMember percentLineBranding"
+    "photoMember sectionWebDesignPercent"
+    "photoMember percentLineWeb"
+    "photoMember sectionUIUXPercent"
+    "photoMember percentLineUI"
+    "three_dot three_dot"
+    "projects_line projects_line"
+    "projects_line projects_line";
+}
+
+.photoMember {
+  grid-area: photoMember;
+  justify-self: center;
+  width: 300px;
+  height: 400px;
+  margin-top: 20px;
+}
+
+.teamName {
+  text-align: left;
+  margin-left: 30%;
+}
+
+.positionDescr {
+  margin: 0px 20px;
+}
+
+.teamPosition {
+  text-align: left;
+  margin-left: 30%;
+}
+
+.teamDot {
+  display: block;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+.teamLine {
+  background-image: url("../img/teamFooter.png");
+  width: 100%;
+  height: 150px;
+}
+
+.sectionPercent {
+  display: flex;
+  flex-direction: row;
+  color: #81868e;
+  height: 25px;
+  margin-left: 30%;
+}
+
+.sectionBrandingPercent {
+  grid-area: sectionBrandingPercent;
+}
+
+.sectionWebDesignPercent {
+  grid-area: sectionWebDesignPercent;
+}
+
+.sectionUIUXPercent {
+  grid-area: sectionUIUXPercent;
+}
+
+.sectionPercent p {
+  margin: 2px 30px 2px 2px;
+}
+
+.percentLine {
+  height: 4px;
+  width: 180px;
+  border-radius: 8px;
+  margin-left: 30%;
+}
+
+.percentLineBranding {
+  background: linear-gradient(to right, #19bd99 80%, #b1b6bd 20%);
+  grid-area: percentLineBranding;
+}
+
+.percentLineWeb {
+  background: linear-gradient(to right, #19bd99 65%, #b1b6bd 35%);
+  grid-area: percentLineWeb;
+}
+
+.percentLineUI {
+  background: linear-gradient(to right, #19bd99 75%, #b1b6bd 25%);
+  grid-area: percentLineUI;
+}
+
+.btnFootPosTeam {
+  grid-row: 14;
+  grid-column: 1/3;
+  align-self: start;
+}
+
+.descrFoot {
+  grid-row: 13;
+  grid-column: 1/3;
+  align-self: baseline;
+  color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .team {
+    grid-template-columns: 1fr 2fr;
+  }
+  .teamDot {
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .team {
+    height: 900px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+      "title"
+      "photoMember"
+      "secondTitle"
+      "secondText"
+      "thirdText"
+      "three_dot"
+      "projects_line"
+      "projects_line";
+  }
+
+  .btnFootPosTeam {
+    grid-row: 8;
+    grid-column: 1/3;
+  }
+  
+  .descrFoot {
+    grid-row: 7;
+    grid-column: 1/3;
+  }
+
+  .sectionPercent {
+    display: none;
+  }
+
+  .percentLine {
+    display: none;
+  }
+  .teamName {
+    text-align: center;
+    margin-left: 0px;
+  }
+
+  .teamPosition {
+    text-align: center;
+    margin-left: 0px;
+  }
+
+  .teamDot {
+    margin: 20px auto;
+  }
+}

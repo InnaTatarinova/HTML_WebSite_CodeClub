@@ -1,0 +1,93 @@
+.blog {
+  height: 600px;
+  background-image: url("../img/blogBackground.png");
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  grid-template-rows: repeat(3, 80px) repeat(2, 50px) 1fr 100px;
+  padding: 20px 70px;
+  color: white;
+  grid-template-areas:
+    "title title title"
+    "descr descr descr"
+    ". secondTitle blogDot"
+    ". secondText blogDot"
+    ". thirdText blogDot"
+    ". forthText blogDot"
+    ". btnReadMore .";
+}
+
+.blog h2 {
+  color: white;
+  margin-left: 0px;
+}
+
+.blog p {
+  margin: 5px;
+}
+
+.btnBlog {
+  border: none;
+  display: block;
+  background-color: transparent;
+  color: #81868e;
+  width: 200px;
+}
+
+.btnBlog:hover {
+  background-color: transparent;
+}
+
+.blogDot{
+    display: flex;
+    flex-direction: column;
+    grid-area: blogDot;
+    margin:50px auto;
+}
+
+.blogDot span{
+    margin-bottom: 10px;
+    opacity: 0.6;
+}
+
+.blogDot span:hover{
+    opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+    .blog {
+        grid-template-columns: 75px 1fr 75px;
+    }
+  }
+
+
+@media screen and (max-width: 750px) {
+  .blog {
+    height: 470px;
+    grid-template-columns: 1fr 50px;
+    grid-template-rows: repeat(4, 50px) 200px 50px;
+    padding: 20px 20px;
+    color: white;
+    grid-template-areas:
+      "title title"
+      "secondTitle ."
+      "secondText ."
+      "thirdText blogDot"
+      "forthText blogDot"
+      "btnReadMore .";
+  }
+
+  .blog h2 {
+    color: white;
+    margin:auto;
+  }
+
+  .blog p {
+    margin-top: 10px;
+  }
+
+  
+
+
+
+}

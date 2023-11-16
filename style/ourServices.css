@@ -1,0 +1,223 @@
+.ourServices {
+  height: 1000px;
+  display: grid;
+  grid-template-columns: 100px 2fr 1fr;
+  grid-template-rows: repeat(2, 80px) repeat(7, 120px);
+  justify-items: center;
+  text-align: start;
+
+  grid-template-areas:
+    "title title title"
+    "descr descr descr"
+    "infoIcon iconTitle ."
+    "infoIcon secondText percentageDiv"
+    "infoIcon thirdText percentageDiv"
+    "infoIcon thirdText percentageDiv"
+    "serviceLine serviceLine serviceLine"
+    "serviceLine serviceLine serviceLine"
+    "serviceLine serviceLine serviceLine";
+}
+
+.percentageDiv {
+  grid-area: percentageDiv;
+  text-align: center;
+  display: flex;
+}
+
+.percentageStyle {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  color: #81868e;
+}
+
+.percentageNumber {
+  margin: 40px 65px;
+  position: absolute;
+}
+
+.percentageName {
+  margin-top: 10px;
+}
+
+.circular-chart {
+  display: block;
+  position: relative;
+  margin: auto 30px;
+  width: 120px;
+  height: 120px;
+}
+
+.circle {
+  stroke: #4cc790;
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+  position: absolute;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 200;
+  }
+}
+
+.serviceLine {
+  grid-area: serviceLine;
+  background-image: url(../img/blackImg.png);
+  width: 100%;
+}
+
+.impressedH2 {
+  grid-row: 7;
+  grid-column: 1/3;
+  color: white;
+  justify-self: start;
+  margin-left: 100px;
+}
+
+.impressedH3 {
+  grid-row: 8;
+  grid-column: 1/3;
+  color: white;
+  justify-self: start;
+  margin-left: 100px;
+}
+
+.impressedP {
+  grid-row: 9;
+  grid-column: 2/3;
+  color: white;
+  justify-self: start;
+  margin-left: 100px;
+}
+
+.comp {
+  grid-row: 6;
+  grid-column: 3/3;
+  margin-top: -50px;
+}
+
+.showBtnIconService {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .ourServices {
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(4, 80px) 1fr 2fr repeat(3, 1fr);
+    /* grid-template-rows: repeat(6, 80px) repeat(1, 150px) repeat(3, 100px); */
+
+    grid-template-areas:
+      "title title"
+      "descr descr"
+      "infoIcon infoIcon"
+      "iconTitle percentageDiv"
+      "secondText percentageDiv"
+      "thirdText percentageDiv"
+      ". ."
+      "serviceLine serviceLine"
+      "serviceLine serviceLine"
+      "serviceLine serviceLine";
+  }
+
+  .circular-chart {
+    width: 75px;
+    height: 75px;
+    margin: auto 30px;
+  }
+
+  .percentageStyle {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .percentageDiv {
+    display: block;
+  }
+
+  .percentageDiv div {
+    margin: auto 20px;
+  }
+
+  .percentageNumber {
+    margin: 27px 50px;
+  }
+
+  .impressedH2 {
+    grid-row: 8;
+    grid-column: 1;
+  }
+
+  .impressedH3 {
+    grid-row: 9;
+    grid-column: 1;
+  }
+
+  .impressedP {
+    grid-row: 10;
+    grid-column: 1;
+    margin-left: 200px;
+  }
+
+  .comp {
+    grid-row: 7/10;
+    grid-column: 1/2;
+    width: 350px;
+    height: 300px;
+    margin-left: 120%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .ourServices {
+    height: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 50px 100px 75px minmax(50px, 200px) 50px repeat(3, 75px);
+
+    grid-template-areas:
+      "title"
+      "infoIcon"
+      "iconTitle"
+      "iconText"
+      "btnReadMore"
+      "serviceLine"
+      "serviceLine"
+      "serviceLine";
+  }
+
+  .showBtnIconService {
+    display: block;
+  }
+
+  .percentageDiv {
+    display: none;
+  }
+
+  .impressedH2 {
+    grid-row: 6;
+    grid-column: 1/1;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .impressedH3 {
+    grid-row: 7;
+    grid-column: 1/1;
+    margin-left: 20px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .impressedP {
+    grid-row: 8;
+    grid-column: 1/1;
+    font-size: 12px;
+  }
+
+  .comp {
+    display: none;
+  }
+}

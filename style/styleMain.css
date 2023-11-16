@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../font/OpenSans.ttf");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../font/SourceSansPro.ttf");
+}
+
+@font-face {
+  font-family: "Big John";
+  src: url("../font/BIG\ JOHN.otf");
+}
+
+body {
+  max-width: 100%;
+  min-width: 40%;
+  height: 100%;
+  font-family: "Open Sans";
+  text-align: center;
+  margin: 0px;
+}
+
+.backgroundWhite {
+  background-color: #ffffff;
+}
+
+.backgroundGrey {
+  background-color: #f3f3f3;
+}
+
+h2 {
+  font-size: 20px;
+  letter-spacing: 4px;
+  color: #333b46;
+  font-weight: 300;
+  font-family: "Source Sans Pro";
+  padding-top: 30px;
+  align-self: center;
+  text-align: center;
+}
+
+h3 {
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 28px;
+  color: #81868e;
+  font-weight: 400;
+}
+
+.descr {
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  color: #81868e;
+  font-weight: 400;
+  align-self: start;
+}
+
+.thirdText {
+  color: #81868e;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+.forthText {
+  grid-area: forthText;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+button {
+  font-size: 16px;
+  line-height: 12px;
+  color: #333b46;
+  font-weight: 400;
+  border: #19bd99 1px solid;
+  border-radius: 15px;
+  width: 100px;
+  height: 30px;
+}
+
+button:hover {
+  color: white;
+  background: #19bd99;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showElem {
+  display: block;
+}
+
+.hideElem {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .descr {
+    display: none;
+  }
+}
+
+/* grid-area name */
+.contentCentreTwoColumn {
+  grid-column: 1/3;
+}
+
+.contentCentreThreeColumn {
+  grid-column: 1/4;
+}
+
+.contentCentreFiveColumn {
+  grid-column: 1/6;
+}
+
+.titleH2 {
+  grid-area: title;
+}
+
+.descr {
+  grid-area: descr;
+}
+
+.secondTitle {
+  grid-area: secondTitle;
+}
+
+.secondText {
+  grid-area: secondText;
+}
+
+.thirdText {
+  grid-area: thirdText;
+}
+
+.submitBackgr {
+  grid-area: submitBackgr;
+}
+
+.btnReadMore {
+  grid-area: btnReadMore;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.iconMenu {
+  grid-area: iconMenu;
+}
+
+.iconClose {
+  grid-area: iconClose;
+}
+
+.infoIcon {
+  grid-area: infoIcon;
+}
+
+.photoIpad {
+  grid-area: photoIpad;
+}
+

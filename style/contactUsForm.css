@@ -1,0 +1,67 @@
+.contactUsForm {
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 3fr;
+  row-gap: 20px;
+  padding: 30px 150px 50px 150px;
+  grid-template-areas:
+    "title"
+    "contactForm";
+}
+
+.contactForm {
+  grid-area: contactForm;
+  flex-wrap: wrap;
+}
+
+.contactFormInput {
+  height: 30px;
+  width: 30%;
+}
+
+.contactFormMessage {
+  height: 120px;
+  width: 94%;
+  margin-bottom: 20px;
+}
+
+.contactUsForm input {
+  border: #19bd99 1px solid;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.btnContactUsStyle {
+  width: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .contactUsForm {
+    height: 400px;
+    padding: 30px 60px 50px 60px;
+  }
+  .contactFormMessage {
+    height: 120px;
+    width: 96%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .contactUsForm {
+    padding: 30px 20px 50px 20px;
+  }
+
+  .contactFormMessage {
+    height: 120px;
+    width: 92%;
+    margin-bottom: 20px;
+  }
+
+  .contactFormInput {
+    height: 30px;
+    width: 92%;
+  }
+}

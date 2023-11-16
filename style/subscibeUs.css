@@ -1,0 +1,74 @@
+.subscribeUs {
+  height: 300px;
+  background-image: url("../img/subscribeUsBackground.png");
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  padding: 20px 50px 50px 50px;
+  column-gap: 20px;
+  grid-template-areas:
+    "title"
+    "descr"
+    "subscrForm";
+}
+.subscribeUs h2 {
+  color: white;
+}
+
+.subscrForm {
+  grid-area: subscrForm;
+}
+
+.btnSubmitStyle {
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #19bd9a;
+  color: white;
+  margin: auto;
+}
+
+.subscribeUsInputStyle {
+  color: white;
+  background-color: transparent;
+  height: 40px;
+  border: solid 1px #19bd9a;
+  border-radius: 5px;
+  width: 50%;
+  margin: auto;
+  margin-right: 30px;
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+.subscribeUsInputStyle:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1200px) {
+  .subscribeUsInputStyle {
+    width: 70%;
+  }
+
+  .btnSubmitStyle {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .subscribeUs {
+    height: 200px;
+    padding: 20px 20px 50px 20px;
+    column-gap: 20px;
+    grid-template-areas:
+      "title"
+      "subscrForm"
+      "subscrForm";
+  }
+
+  .subscrForm {
+    display: flex;
+    flex-direction: column;
+  }
+}

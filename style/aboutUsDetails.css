@@ -1,0 +1,99 @@
+.aboutUsDetails {
+  height: 600px;
+  display: grid;
+  text-align: center;
+  align-content: center;
+  column-gap: 40px;
+  grid-template-areas:
+    "title"
+    "descr"
+    "infoIcon"
+    "showDetailsAboutBouncy";
+}
+
+.aboutUsDetails img {
+  padding-left: 20px;
+}
+
+.textStart {
+  text-align: start;
+  margin-left: 50px;
+}
+/* .infoIcon {
+  margin-top: 20px;
+}
+
+.btnIcon {
+  border: 1px #a3a4a7 solid;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #a3a4a7;
+  margin: 20px;
+}
+
+.bi-icon {
+  color: white;
+}
+
+.setChoosenIconBackground {
+  background-color: #19bd99;
+}
+
+.deleteChoosenIconBackground {
+  background-color: #a3a4a7;
+} */
+
+.showDetailsAboutBouncy {
+  grid-area: showDetailsAboutBouncy;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "iconTitle ."
+    "secondText thirdText";
+}
+
+/* .showBtnIconDescr {
+  display: none;
+} */
+
+@media screen and (max-width: 750px) {
+  .aboutUsDetails {
+    font-size: 14px;
+    line-height: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "infoIcon"
+      "showDetailsAboutBouncy";
+  }
+
+  .showDetailsAboutBouncy {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "iconTitle"
+      "iconText"
+      "btnReadMore"
+      "iconExplanation";
+  }
+
+  /* .iconTitle {
+    grid-area: iconTitle;
+    display: block;
+  }
+
+  .iconText {
+    grid-area: iconText;
+  }
+
+  .iconExplanation {
+    display: none;
+  }
+
+  .showBtnIconDescr {
+    display: block;
+  } */
+
+
+}

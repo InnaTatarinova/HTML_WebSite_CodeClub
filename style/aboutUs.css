@@ -1,0 +1,44 @@
+.aboutUs {
+  height: 480px;
+  margin: 20px 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  text-align: start;
+  column-gap: 30px;
+  grid-template-areas:
+    "title photoIpad"
+    "descr photoIpad"
+    "descr photoIpad"
+    "btnReadMore photoIpad";
+}
+
+.photoIpad {
+  margin: auto;
+}
+
+
+@media screen and (max-width: 750px) {
+  .aboutUs {
+    height: 480px;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 30px 75px 30px 75px;
+    text-align: start;
+    column-gap: 30px;
+    grid-template-areas:
+      "title"
+      "photoIpad"
+      "btnReadMore";
+  }
+
+  .btnReadMore{
+    margin:auto;
+  }
+
+  .photoIpad{
+    margin-top: 30px;
+  }
+
+}

@@ -1,0 +1,123 @@
+.ourPrice {
+  height: 640px;
+  display: grid;
+  padding: 20px 100px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px) 1fr;
+  column-gap: 100px;
+  align-self: center;
+  grid-template-areas:
+    "title title title"
+    "descr descr descr"
+    "premiumPrice letsTalk exclusivePrice";
+}
+
+.premiumPrice {
+  grid-area: premiumPrice;
+}
+
+.letsTalk {
+  grid-area: letsTalk;
+}
+
+.exclusivePrice {
+  grid-area: exclusivePrice;
+}
+
+.priceBlock {
+  height: 400px;
+  background-color: white;
+  border: #19bd9a 1px solid;
+  border-radius: 5px;
+}
+
+.greenBackgroundPriceSection {
+  background-color: #19bd9a;
+  color: white;
+  margin: auto;
+  font-size: 20px;
+  height: 50px;
+  padding-top: 30px;
+  cursor: pointer;
+}
+
+.greenBackgroundPriceSection p {
+  margin-top: 0px;
+}
+
+.greenBackgroundPriceSection p:hover {
+  transform: scale(1.2);
+}
+
+.priceNumber {
+  font-size: 42px;
+  color: #1fbba6;
+  padding-top: 50px;
+  margin-bottom: 5px;
+}
+
+.ourSuperiority {
+  font-size: 17px;
+  line-height: 33px;
+  padding-top: 3px;
+}
+
+@media screen and (max-width: 1200px) {
+  .ourPrice {
+    padding: 20px 30px;
+    column-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .ourPrice {
+    height: 450px;
+    padding: 10px 20px;
+    row-gap: 20px;
+    grid-template-rows: 100px repeat(3, 80px);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "premiumPrice"
+      "letsTalk"
+      "exclusivePrice";
+  }
+
+  .priceBlock {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+  }
+
+  .greenBackgroundPriceSection {
+    width: 40%;
+    margin: 0px;
+    height: 80px;
+    padding-top: 0px;
+  }
+
+  .greenBackgroundPriceSection p {
+    margin-top: 20px;
+  }
+
+  .priceNumber {
+    font-size: 30px;
+    color: #1fbba6;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin: auto;
+  }
+
+  .whiteBackgroundPriceSection {
+    width: 60%;
+    text-align: center;
+  }
+
+  .ourSuperiority {
+    display: none;
+  }
+
+  .widePriceBlock {
+    width: 100%;
+  }
+}

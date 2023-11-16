@@ -1,0 +1,41 @@
+.footer {
+  height: 150px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 50px);
+  column-gap: 10px;
+  padding: 10px;
+  grid-template-areas:
+    "title"
+    "descr"
+    "socialMediaIcon";
+}
+
+.footer h2 {
+  font-size: 25px;
+  width: 700;
+}
+
+.socialMediaIcon {
+  grid-area: socialMediaIcon;
+}
+
+.socialIcon {
+  display: flex;
+  margin: auto;
+}
+
+.socialIcon svg {
+  margin: 10px;
+}
+
+@media screen and (max-width: 750px) {
+  .footer {
+    height: 100px;
+    grid-template-rows: repeat(2, 50px);
+    row-gap: 10px;
+    grid-template-areas:
+      "title"
+      "divForImg";
+  }
+}

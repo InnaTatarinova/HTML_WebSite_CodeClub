@@ -1,0 +1,157 @@
+.startPage {
+  height: 700px;
+  width: 100%;
+  background-image: url("../img/MainImgLogo.png");
+  background-size: cover;
+  display: grid;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+  grid-template-areas:
+    "logo menu"
+    "title title"
+    "title title"
+    "descr descr"
+    "img1 img1";
+}
+
+.startPageWhenWindowDecrease {
+  height: 1054px;
+  width: 100%;
+  background-color: #19bd99;
+  background-size: cover;
+  display: grid;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas:
+    "logo iconClose"
+    "menu menu";
+}
+
+.logo {
+  font-size: 25px;
+  font-family: "Big John";
+  text-align: center;
+  margin: 10px auto;
+  height: 60px;
+  width: 30%;
+}
+
+.hello {
+  border-radius: 8px;
+  border: white solid 1px;
+  width: 50px;
+}
+
+.hello:hover {
+  border-color: #19bd99;
+}
+
+.menuStartPage {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-column-gap: 10px;
+  height: 60px;
+  text-align: center;
+  align-content: center;
+  margin-right: 20px;
+  margin-left: 100px;
+  float: right;
+}
+
+.menuStartPage div:hover {
+  color: #19bd99;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.menuStartPageWhenWindowDecrease {
+  height: 600px;
+  margin: 10px;
+}
+.menuStartPageWhenWindowDecrease div:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: white;
+}
+
+.menuStartPageWhenWindowDecrease div {
+  height: 50px;
+  margin: 20px auto;
+  width: 80%;
+}
+.iconMenu {
+  display: none;
+  float: right;
+  cursor: pointer;
+  margin: 10px 0% 0 75%;
+  width: 36px;
+}
+
+.menu_icon {
+  float: right;
+  cursor: pointer;
+  margin: 10px 0% 0 75%;
+  width: 36px;
+}
+
+.iconMenu:hover {
+  color: #19bd99;
+}
+
+.mainGreetingText {
+  font-size: 35px;
+  letter-spacing: 7px;
+  line-height: 70px;
+  font-weight: 300;
+  font-family: "Source Sans Pro";
+}
+
+.mainPosition {
+  align-content: center;
+  margin: auto;
+}
+
+.startPage img {
+  align-self: center;
+  justify-self: center;
+}
+
+.hiddenEl {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .startPage {
+    grid-template-areas:
+      "logo iconMenu"
+      "title title"
+      "descr descr"
+      "img1 img1";
+  }
+
+  .menuStartPage {
+    display: none;
+  }
+
+  .iconMenu {
+    display: block;
+  }
+
+  .descr {
+    font-size: 16px;
+    width: 90%;
+  }
+
+  .hiddenEl {
+    display: none;
+  }
+
+  .showEl {
+    display: block;
+  }
+}

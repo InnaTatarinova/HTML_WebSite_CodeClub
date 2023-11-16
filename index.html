@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/styleMain.css" />
+    <link rel="stylesheet" href="style/iconStyle.css" />
+    <link rel="stylesheet" href="style/startPage.css" />
+    <link rel="stylesheet" href="style/aboutUs.css" />
+    <link rel="stylesheet" href="style/aboutUsDetails.css" />
+    <link rel="stylesheet" href="style/featuredProject.css" />
+    <link rel="stylesheet" href="style/ourServices.css" />
+    <link rel="stylesheet" href="style/portfolio.css" />
+    <link rel="stylesheet" href="style/team.css" />
+    <link rel="stylesheet" href="style/testimonials.css" />
+    <link rel="stylesheet" href="style/blog.css" />
+    <link rel="stylesheet" href="style/ourPrice.css" />
+    <link rel="stylesheet" href="style/subscibeUs.css" />
+    <link rel="stylesheet" href="style/contactUs.css" />
+    <link rel="stylesheet" href="style/contactUsForm.css" />
+    <link rel="stylesheet" href="style/findUsOnMap.css" />
+    <link rel="stylesheet" href="style/footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+
+    <script src="index.js"></script>
+  </head>
+
+  <body id="body">
+    <header class="startPage" id="startPage">
+      <div class="logo">BOUNCY</div>
+      <div class="menuStartPage menu" id="menu_nav">
+        <div class="hello">Hello</div>
+        <div onclick="scrollToSection('about')">About</div>
+        <div onclick="scrollToSection('service')">Services</div>
+        <div onclick="scrollToSection('portfolio')">Portfolio</div>
+        <div onclick="scrollToSection('team')">Team</div>
+        <div onclick="scrollToSection('blog')">Blog</div>
+        <div onclick="scrollToSection('contact')">Contact</div>
+      </div>
+      <div class="menu_icon iconMenu" onclick="showMenuList()" id="iconMenu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+          />
+        </svg>
+      </div>
+      <div
+        class="menu_icon iconClose hiddenEl"
+        onclick="hideMenuList()"
+        id="iconClose"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          fill="currentColor"
+          class="bi bi-x-lg"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+          />
+        </svg>
+      </div>
+      <div class="mainGreetingText mainPosition titleH2" id="greetingText">
+        WE ARE CODE CAFE
+      </div>
+      <div class="mainPosition descr" id="descr">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+      </div>
+    </header>
+
+    <!-- About us section -->
+    <section class="aboutUs backgroundWhite" id="about">
+      <h2 class="titleH2">THIS IS BOUNCY</h2>
+      <img src="img/IPAD.png" alt="IPAD" class="photoIpad" />
+      <p class="descr">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias excepturi sint occaecati cupiditate non provident,
+        similique sunt in culpa qui officia deserunt mollitia animi, id est
+        laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
+        distinctio.
+      </p>
+      <button class="btnReadMore" type="button">Read More</button>
+    </section>
+
+    <!-- Details About us section -->
+    <section class="aboutUsDetails backgroundGrey">
+      <h2 class="titleH2">DETAILS ABOUT BOUNCY</h2>
+      <p class="descr">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium
+      </p>
+      <div class="infoIcon">
+        <button
+          class="btnIcon setChoosenIconBackground btnIconAboutUs"
+          onclick="chooseIconBouncy(id,'btnIconAboutUs')"
+          id="iconInfoPassion"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            fill="currentColor"
+            class="bi bi-heart bi-icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+            />
+          </svg>
+        </button>
+
+        <button
+          class="btnIcon btnIconAboutUs"
+          onclick="chooseIconBouncy(id,'btnIconAboutUs')"
+          id="iconInfoIdea"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            fill="currentColor"
+            class="bi bi-tools bi-icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"
+            />
+          </svg>
+        </button>
+
+        <button
+          class="btnIcon btnIconAboutUs"
+          onclick="chooseIconBouncy(id,'btnIconAboutUs')"
+          id="iconInfoLights"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            fill="currentColor"
+            class="bi bi-lamp bi-icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.04.303A.5.5 0 0 1 5.5 0h5c.2 0 .38.12.46.303l3 7a.5.5 0 0 1-.363.687h-.002c-.15.03-.3.056-.45.081a32.731 32.731 0 0 1-4.645.425V13.5a.5.5 0 1 1-1 0V8.495a32.753 32.753 0 0 1-4.645-.425c-.15-.025-.3-.05-.45-.08h-.003a.5.5 0 0 1-.362-.688l3-7ZM3.21 7.116A31.27 31.27 0 0 0 8 7.5a31.27 31.27 0 0 0 4.791-.384L10.171 1H5.83L3.209 7.116Z"
+            />
+            <path
+              d="M6.493 12.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.052.075l-.001.004-.004.01V14l.002.008a.147.147 0 0 0 .016.033.62.62 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.62.62 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411Z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="showDetailsAboutBouncy" id="iconInfoPassion">
+        <h2 class="textStart iconTitle">Creative Passion</h2>
+        <h3 class="secondText textStart iconText">
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui
+          blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        </h3>
+        <p class="thirdText textStart iconExplanation">
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui
+          blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+          et quas molestias excepturi sint occaecati cupiditate non provident,
+          similique sunt in culpa qui officia deserunt mollitia animi, id est
+          laborum et dolorum fuga. Et harum quidem r
+        </p>
+        <button class="btnReadMore showBtnIconDescr" type="button">
+          Read More
+        </button>
+      </div>
+    </section>
+
+    <!-- Features projects section -->
+    <section class="featuredProjects backgroundWhite">
+      <h2 class="titleH2">FEATURED PROJECTS</h2>
+      <p class="descr">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium
+      </p>
+      <div class="project_img1 project_img"></div>
+      <div class="project_img2 project_img"></div>
+      <div class="project_img3 project_img"></div>
+      <div class="projects_line"></div>
+      <p class="explanationForSubmit">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis
+      </p>
+      <button>Submit Now</button>
+    </section>
+
+    <!-- Our service section -->
+    <section class="ourServices backgroundGrey" id="service">
+      <h2 class="titleH2">OUR SERVICE</h2>
+      <p class="descr">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium
+      </p>
+      <h2 class="iconTitle textStart">Graphic Design</h2>
+      <h3 class="secondText textStart iconText">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti
+      </h3>
+      <p class="thirdText textStart iconExplanation hideServiceExplan">
+        atque corrupti quos dolores et quas molestias excepturi sint occaecati
+        cupiditate non provident, similique sunt in culpa qui officia deserunt
+        mollitia animi, id est laborum et dolorum fuga
+      </p>
+      <div class="infoIcon">
+        <button
+          class="btnIcon setChoosenIconBackground bi-icon graphicDesignIcon btnIconService"
+          onclick="chooseIconBouncy(id,'btnIconService')"
+          id="graphicDesignIcon"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            fill="currentColor"
+            class="bi bi-tools"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"
+            />
+          </svg>
+        </button>
+
+        <button
+          class="btnIcon bi-icon logoDesignIcon btnIconService"
+          onclick="chooseIconBouncy(id,'btnIconService')"
+          id="logoDesignIcon"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            fill="currentColor"
+            class="bi bi-brush"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.118 8.118 0 0 1-3.078.132 3.659 3.659 0 0 1-.562-.135 1.382 1.382 0 0 1-.466-.247.714.714 0 0 1-.204-.288.622.622 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04zM4.705 11.912a1.23 1.23 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.39 3.39 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3.122 3.122 0 0 0 .126-.75l-.793-.792zm1.44.026c.12-.04.277-.1.458-.183a5.068 5.068 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005a.031.031 0 0 1-.007.004zm3.582-3.043.002.001h-.002z"
+            />
+          </svg>
+        </button>
+
+        <button
+          class="btnIcon bi-icon webDesignIcon btnIconService"
+          onclick="chooseIconBouncy(id,'btnIconService')"
+          id="webDesignIcon"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            fill="currentColor"
+            class="bi bi-airplane-engines"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 0c-.787 0-1.292.592-1.572 1.151A4.347 4.347 0 0 0 6 3v3.691l-2 1V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.191l-1.17.585A1.5 1.5 0 0 0 0 10.618V12a.5.5 0 0 0 .582.493l1.631-.272.313.937a.5.5 0 0 0 .948 0l.405-1.214 2.21-.369.375 2.253-1.318 1.318A.5.5 0 0 0 5.5 16h5a.5.5 0 0 0 .354-.854l-1.318-1.318.375-2.253 2.21.369.405 1.214a.5.5 0 0 0 .948 0l.313-.937 1.63.272A.5.5 0 0 0 16 12v-1.382a1.5 1.5 0 0 0-.83-1.342L14 8.691V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v.191l-2-1V3c0-.568-.14-1.271-.428-1.849C9.292.591 8.787 0 8 0ZM7 3c0-.432.11-.979.322-1.401C7.542 1.159 7.787 1 8 1c.213 0 .458.158.678.599C8.889 2.02 9 2.569 9 3v4a.5.5 0 0 0 .276.447l5.448 2.724a.5.5 0 0 1 .276.447v.792l-5.418-.903a.5.5 0 0 0-.575.41l-.5 3a.5.5 0 0 0 .14.437l.646.646H6.707l.647-.646a.5.5 0 0 0 .14-.436l-.5-3a.5.5 0 0 0-.576-.411L1 11.41v-.792a.5.5 0 0 1 .276-.447l5.448-2.724A.5.5 0 0 0 7 7V3Z"
+            />
+          </svg>
+        </button>
+
+        <button
+          class="btnIcon bi-icon webMaintenanceIcon btnIconService"
+          onclick="chooseIconBouncy(id,'btnIconService')"
+          id="webMaintenanceIcon"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            fill="currentColor"
+            class="bi bi-plug"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6 0a.5.5 0 0 1 .5.5V3h3V.5a.5.5 0 0 1 1 0V3h1a.5.5 0 0 1 .5.5v3A3.5 3.5 0 0 1 8.5 10c-.002.434-.01.845-.04 1.22-.041.514-.126 1.003-.317 1.424a2.083 2.083 0 0 1-.97 1.028C6.725 13.9 6.169 14 5.5 14c-.998 0-1.61.33-1.974.718A1.922 1.922 0 0 0 3 16H2c0-.616.232-1.367.797-1.968C3.374 13.42 4.261 13 5.5 13c.581 0 .962-.088 1.218-.219.241-.123.4-.3.514-.55.121-.266.193-.621.23-1.09.027-.34.035-.718.037-1.141A3.5 3.5 0 0 1 4 6.5v-3a.5.5 0 0 1 .5-.5h1V.5A.5.5 0 0 1 6 0zM5 4v2.5A2.5 2.5 0 0 0 7.5 9h1A2.5 2.5 0 0 0 11 6.5V4H5z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="percentageDiv">
+        <div class="sectionBranding" id="sectionBranding">
+          <p
+            class="percentageStyle percentageNumber"
+            id="brandPercentageNumber"
+          >
+            80%
+          </p>
+          <svg viewBox="0 0 36 36" class="circular-chart">
+            <path
+              id="brandPercentagePath"
+              class="circle"
+              stroke-dasharray="80,100"
+              d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+          </svg>
+
+          <p class="percentageStyle percentageName">Branding</p>
+        </div>
+
+        <div class="sectionWebDesign" id="sectionWebDesign">
+          <p class="percentageStyle percentageNumber" id="webPercentageNumber">
+            75%
+          </p>
+          <svg viewBox="0 0 36 36" class="circular-chart">
+            <path
+              id="webPercentagePath"
+              class="circle"
+              stroke-dasharray="75, 100"
+              d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+          </svg>
+
+          <p class="percentageStyle percentageName">Web Design</p>
+        </div>
+
+        <div class="sectionUIUX" id="sectionUIUX">
+          <p class="percentageStyle percentageNumber" id="uiPercentageNumber">
+            60%
+          </p>
+          <svg viewBox="0 0 36 36" class="circular-chart">
+            <path
+              id="uiPercentagePath"
+              class="circle"
+              stroke-dasharray="60, 100"
+              d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+          </svg>
+
+          <p class="percentageStyle percentageName">UI/UX</p>
+        </div>
+      </div>
+
+      <button class="btnReadMore showBtnIconService" type="button">
+        Read More
+      </button>
+
+      <div class="serviceLine"></div>
+
+      <h2 class="impressedH2">Impressed ?</h2>
+      <h3 class="impressedH3">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias
+      </h3>
+      <p class="impressedP">
+        - Abdullah Noman <br />
+        Creatice Director, Code Cafe
+      </p>
+
+      <img src="img/Comp.png" class="comp" />
+    </section>
+
+    <!-- Portfolio section -->
+    <section class="portfolio backgroundGrey" id="portfolio">
+      <h2 class="titleH2">THE PORTFOLIO</h2>
+      <p class="descr">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium
+      </p>
+      <div class="menuPortfolio menu">
+        <div>All works</div>
+        <div>Print</div>
+        <div>Identity</div>
+        <div>Branding</div>
+        <div>Web</div>
+        <div>HTML</div>
+        <div>Wordpress</div>
+      </div>
+      <div class="divForImg img1">
+        <img src="img/portfolio1.png" alt="portf1" />
+      </div>
+      <div class="divForImg img2">
+        <img src="img/portfolio2.png" alt="portf2" />
+      </div>
+      <div class="divForImg img3">
+        <img src="img/portfolio3.png" alt="portf3" />
+      </div>
+      <div class="divForImg img4">
+        <img src="img/portfolio4.png" alt="portf4" />
+      </div>
+      <div class="divForImg img5">
+        <img src="img/portfolio5.png" alt="portf5" />
+      </div>
+      <div class="divForImg img6">
+        <img src="img/portfolio6.png" alt="portf6" />
+      </div>
+      <div class="divForImg img7">
+        <img src="img/portfolio7.png" alt="portf7" />
+      </div>
+      <div class="divForImg img8">
+        <img src="img/portfolio8.png" alt="portf8" />
+      </div>
+      <div class="divForImg img9">
+        <img src="img/portfolio9.png" alt="portf9" />
+      </div>
+      <div class="divForImg img10">
+        <img src="img/portfolio10.png" alt="portf10" />
+      </div>
+      <div class="divForImg img11">
+        <img src="img/portfolio11.png" alt="portf11" />
+      </div>
+      <div class="divForImg img12">
+        <img src="img/portfolio12.png" alt="portf12" />
+      </div>
+
+      <!-- Show carusel 750px -->
+      <div class="prevIcon">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      </div>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="img/portfolio1.png" alt="portf1" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/portfolio2.png" alt="portf2" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/portfolio3.png" alt="portf3" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/portfolio4.png" alt="portf4" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/portfolio5.png" alt="portf5" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/portfolio6.png" alt="portf6" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/portfolio7.png" alt="portf7" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/portfolio8.png" alt="portf8" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/portfolio9.png" alt="portf9" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/portfolio10.png" alt="portf10" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/portfolio11.png" alt="portf11" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/portfolio12.png" alt="portf12" />
+        </div>
+
+        <!-- Next and previous buttons -->
+      </div>
+      <div class="nextIcon">
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <br />
+      <!-- The dots/circles -->
+      <div class="three_dot">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+        <span class="dot" onclick="currentSlide(11)"></span>
+        <span class="dot" onclick="currentSlide(12)"></span>
+      </div>
+
+      <div class="projects_line portfolioLine"></div>
+      <h2 class="descrPortf">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis
+      </h2>
+      <button class="btnFootPosPortf btnFootImg">Start Project</button>
+    </section>
+
+    <!-- Team section -->
+    <section class="team backgroundWhite" id="team">
+      <h2 class="titleH2">THE TEAM</h2>
+      <p class="descr">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium
+      </p>
+      <img
+        src="img/teamPhoto4.png"
+        alt="photo"
+        class="photoMember"
+        id="photoMember"
+      />
+      <h2 class="secondTitle teamName" id="teamName">Abdullah Noman</h2>
+      <p class="secondText teamPosition" id="teamPosition">
+        Creative Director, Code Cafe
+      </p>
+      <p class="thirdText positionDescr" id="positionDescr">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium
+      </p>
+      <div class="sectionBrandingPercent sectionPercent">
+        <p>BRANDING</p>
+        <p id="percBrend">80%</p>
+      </div>
+      <div class="percentLineBranding percentLine"></div>
+
+      <div class="sectionWebDesignPercent sectionPercent">
+        <p>WEB DESIGN</p>
+        <p id="percWeb">65%</p>
+      </div>
+      <div class="percentLineWeb percentLine"></div>
+
+      <div class="sectionUIUXPercent sectionPercent">
+        <p>USER INTERFACE</p>
+        <p id="percUI">75%</p>
+      </div>
+      <div class="percentLineUI percentLine"></div>
+
+      <div class="three_dot teamDot">
+        <span class="dot" onclick="currentTeamSlide(1)"></span>
+        <span class="dot" onclick="currentTeamSlide(2)"></span>
+        <span class="dot" onclick="currentTeamSlide(3)"></span>
+      </div>
+
+      <div class="projects_line teamLine"></div>
+      <h2 class="descrFoot">Already Loved Us? Let’s talk!</h2>
+      <button class="btnFootImg btnFootPosTeam">Contact Us</button>
+    </section>
+
+    <!-- Testimonials section -->
+    <section class="testimonials backgroundGrey">
+      <h2 class="titleH2">TESTIMONIALS</h2>
+      <p class="descr">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium
+      </p>
+      <div class="testimon backgroundWhite testSection">
+        <img
+          src="img/testimonialsPhoto2.jpg"
+          class="photoTestim"
+          id="photoTestim"
+        />
+        <h3 class="textStart secondText testimDescr" id="testimDescr">
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui
+          blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+          et quas molestias excepturi sint occaecati cupiditate non provident,
+          similique sunt in culpa qui officia deserunt mollitia
+        </h3>
+        <h2 class="textStart secondTitle testimName" id="testimName">
+          LORENZA
+        </h2>
+        <p class="textStart thirdText" id="testimProf">FOUNDER, ARTWAYS BD</p>
+        <div class="three_dot testimDot">
+          <span class="dot" onclick="currentTestimSlide(1)"></span>
+          <span class="dot" onclick="currentTestimSlide(2)"></span>
+          <span class="dot" onclick="currentTestimSlide(3)"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog section -->
+    <section class="blog">
+      <h2 class="textStart titleH2">LATEST NEWS</h2>
+      <p class="textStart descr">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium
+      </p>
+      <h2 class="textStart secondTitle" id="titleBlog">
+        The trending Landing Pages
+      </h2>
+      <p class="textStart secondText" id="authorBlog">by Kabir Uddin</p>
+      <p class="textStart thirdText" id="commentsBlog">
+        6950 Likes - 243 Comments - 703 shares
+      </p>
+      <p class="textStart forthText" id="newsBlog">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias excepturi sint occaecati cupiditate non provident,
+        similique sunt in culpa qui officia deserunt mollitia animi, id est
+        laborum et dolorum fuga. Et harum quidem r
+      </p>
+      <button class="btnReadMore showBtnIconDescr btnBlog" type="button">
+        + Read More
+      </button>
+      <div class="three_dot blogDot">
+        <span class="dot" onclick="currentBlogSlide(1)"></span>
+        <span class="dot" onclick="currentBlogSlide(2)"></span>
+        <span class="dot" onclick="currentBlogSlide(3)"></span>
+      </div>
+    </section>
+
+    <!--OurPrice section  -->
+    <section class="ourPrice backgroundGrey">
+      <h2 class="titleH2">OUR PRICE</h2>
+      <p class="descr">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium
+      </p>
+
+      <div class="premiumPrice priceBlock">
+        <div class="greenBackgroundPriceSection">
+          <p>PREMIUM</p>
+        </div>
+        <div class="whiteBackgroundPriceSection">
+          <p class="priceNumber">$60</p>
+          <p>Per Month</p>
+        </div>
+      </div>
+
+      <div class="letsTalk priceBlock">
+        <div class="ourSuperiority whiteBackgroundPriceSection">
+          <p>Full Branding</p>
+          <p>Project Management</p>
+          <p>Unlimited Revisions</p>
+          <p>24/7 h Service</p>
+          <p>Free Domain</p>
+          <p>Free Hosting</p>
+        </div>
+        <div class="greenBackgroundPriceSection widePriceBlock">
+          <p>Let’s Start</p>
+        </div>
+      </div>
+
+      <div class="exclusivePrice priceBlock">
+        <div class="greenBackgroundPriceSection">
+          <p>EXCLUSIVE</p>
+        </div>
+        <div class="whiteBackgroundPriceSection">
+          <p class="priceNumber">$80</p>
+          <p>Per Month</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SubscribeUs section -->
+    <section class="subscribeUs">
+      <h2 class="titleH2">SUBCRIBE US</h2>
+      <p class="descr">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium
+      </p>
+      <div class="subscrForm">
+        <input
+          type="email"
+          name="input"
+          placeholder="Email Address"
+          class="subscribeUsInputStyle inputField1"
+        />
+        <button class="btnSubmitStyle btnSubmit">SUBMIT</button>
+      </div>
+    </section>
+
+    <!-- ContactUs section -->
+    <section class="contactUs backgroundGrey" id="contact">
+      <h2 class="titleH2">CONTACT US</h2>
+      <p class="descr">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium
+      </p>
+      <div class="contactUsEmail contactUsPhoto"></div>
+      <div class="contactUsAddress contactUsPhoto"></div>
+      <div class="contactUsPhone contactUsPhoto"></div>
+      <div class="email textPadding contactUsInfo">EMAIL</div>
+      <div class="emailName contactUsInfo">
+        hello@codecafe.com <br />Personal@codecafe.com
+      </div>
+      <div class="office textPadding contactUsInfo">OUR OFFICE</div>
+      <div class="officeName contactUsInfo">
+        240 Bhatikhana, 8200 Barisal <br />
+        Bangladesh
+      </div>
+      <div class="phone textPadding contactUsInfo">PHONE</div>
+      <div class="phoneNumber contactUsInfo">
+        +1 234 567 89 00 <br />
+        +1 987 654 32 10
+      </div>
+      <div class="btnIcon contactUsIcon contactUsIconEmail">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          fill="currentColor"
+          class="bi bi-envelope"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
+          />
+        </svg>
+      </div>
+      <div class="btnIcon contactUsIcon contactUsIconOffice">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          fill="currentColor"
+          class="bi bi-house-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"
+          />
+          <path
+            d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"
+          />
+        </svg>
+      </div>
+      <div class="btnIcon contactUsIcon contactUsIconPhone">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          fill="currentColor"
+          class="bi bi-telephone"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ContactForm section -->
+    <section class="contactUsForm backgroundWhite">
+      <h2 class="titleH2">OR JUST FILL THE FORM</h2>
+      <form class="contactForm">
+        <input
+          type="text"
+          name="input"
+          placeholder="Your name"
+          class="contactFormInput"
+        />
+        <input
+          type="email"
+          name="input"
+          placeholder="Email Address"
+          class="contactFormInput"
+        />
+        <input
+          type="text"
+          name="input"
+          placeholder="Subject"
+          class="contactFormInput"
+        />
+        <input
+          type="text"
+          name="input"
+          placeholder="Your message"
+          class="contactFormMessage"
+        />
+        <button class="btnSubmitStyle btnSubmit btnContactUsStyle">
+          SUBMIT NOW
+        </button>
+      </form>
+    </section>
+
+    <!-- Map section -->
+    <section class="findUsOnMap">
+      <div id="map" class="findUsOnMap"></div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer backgroundGrey">
+      <h2 class="titleH2">BOUNCY</h2>
+      <p class="descr">Copyright 2015. All rights Reserved</p>
+      <div class="socialMediaIcon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          fill="currentColor"
+          class="bi bi-facebook"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          fill="currentColor"
+          class="bi bi-twitter-x"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          fill="currentColor"
+          class="bi bi-linkedin"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          fill="currentColor"
+          class="bi bi-vimeo"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M15.992 4.204c-.071 1.556-1.158 3.687-3.262 6.393-2.175 2.829-4.016 4.243-5.522 4.243-.933 0-1.722-.861-2.367-2.583L3.55 7.523C3.07 5.8 2.556 4.94 2.007 4.94c-.118 0-.537.253-1.254.754L0 4.724a209.56 209.56 0 0 0 2.334-2.081c1.054-.91 1.845-1.388 2.373-1.437 1.243-.123 2.01.728 2.298 2.553.31 1.968.526 3.19.646 3.666.36 1.631.756 2.446 1.186 2.445.334 0 .836-.53 1.508-1.587.671-1.058 1.03-1.863 1.077-2.415.096-.913-.263-1.37-1.077-1.37a3.022 3.022 0 0 0-1.185.261c.789-2.573 2.291-3.825 4.508-3.756 1.644.05 2.419 1.117 2.324 3.2z"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          fill="currentColor"
+          class="bi bi-instagram"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+          />
+        </svg>
+
+        <!-- <img src="img/facebook.png" alt="fcebook" />
+        <img src="img/twitter.png" alt="twitter" />
+        <img src="img/linkedin.png" alt="linkedIn" />
+        <img src="img/vimeo.png" alt="vimeo" />
+        <img src="img/instagramm.png" alt="insta" /> -->
+      </div>
+    </footer>
+
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+
+    <script>
+      // Initialize the map
+      const map = L.map("map");
+
+      // Get the tile layer from OpenStreetMaps
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        // Specify the maximum zoom of the map
+        maxZoom: 19,
+
+        // Set the attribution for OpenStreetMaps
+        attribution:
+          '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      // Set the view of the map
+      // with the latitude, longitude and the zoom value
+      map.setView([53.339688, -6.236688], 16);
+
+      // Show a market at the position of the Eiffel Tower
+      let eiffelMarker = L.marker([53.339688, -6.236688]).addTo(map);
+
+      // Bind popup to the marker with a popup
+      eiffelMarker.bindPopup("We are here").openPopup();
+    </script>
+  </body>
+</html>
